@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violência em sala de aula</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <link rel="icon" href="siren.png" type="image/icon type">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="TCC.css">
+    <script src="dados_mapa.js"></script>
+</head>
+<body>
+    <div id="bloco-1">
+        <div id="abertura" style="position: relative;"> 
+            <div id="titulo" style="position: absolute;">
+                <h1>Violência em sala de aula</h1>
+                <hr style="width: 50%;">
+                <div id="sub_cont">
+                    <p id="subtitulo">Escolas públicas do DF têm na rotina reincidentes casos de violência. Ações de combate insuficientes e recente incremento nos registros tiram a paz do horizonte dessas instituições</p></div>
+                <div id="autoria">
+                    <p>Mateus Salomão • Dezembro de 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="corpo_container">
+        <p class="corpo" id="first_p">A Escola Classe 05 do Cruzeiro se enchia naquela manhã de agosto de 2016. De pouco em pouco, parentes dos estudantes cruzavam o portão de grades e se distribuíam por entre as salas de aula para acompanhar as celebrações do Dia da Família. No time que comandava a festa estava Fabíola Fernandes. À época com mais de 18 anos de magistério, ela tirava de letra o comando da tropa de alunos nesse tipo de evento. Embora o roteiro estivesse na cabeça e tudo transcorresse conforme o planejado, algo intrigava a docente.</p>
+        <p class="corpo">Horas antes, por volta das seis da manhã, o celular de Fabíola notificou uma mensagem no WhatsApp. Nela, uma das poucas mães que tinham o telefone pessoal da professora perguntava sobre o comportamento do filho. Diante do histórico complicado — que incluia um episódio em que ele levou uma faca para a escola — a professora relatou à mãe o comportamento agressivo do estudante. Agora, sete anos depois do ocorrido, a professora ainda lembra com detalhes da resposta, que chegou por meio de um áudio pouco depois: “Olha, eu vou matar você. Eu vou matar você. Eu te odeio por isso. Eu vou te matar”.</p>
+        <p class="corpo">De pronto, Fabíola reconheceu o aluno como o autor do áudio, mas preferiu se convencer de que a mensagem era apenas uma brincadeira de mal gosto. A distração não durou muito e a ficha caiu durante a tarde, após relatar o que ocorreu aos colegas de trabalho. A situação chegou à diretora, que convocou mãe, padrasto e o aluno para irem à escola no mesmo dia. Pressionado pelos quatro adultos na sala, o aluno não só confessou a ameaça como reiterou as intenções contra Fabíola. “Posso não matar agora, mas eu vou matar ela”, teria dito.</p>
+        <p class="corpo">“Depois desse dia, eu não consegui mais ser a professora Fabíola. Continuei vindo trabalhar, mas eu comecei a apresentar sintomas de transtorno de ansiedade generalizado. Antes de eu ir para a escola eu não conseguia mais comer. Eu ia para a escola chorando, entrava na sala de aula chorando e dava aula chorando. Não conseguia mais ficar no ambiente da sala de aula”, conta a professora.</p>
+        <p class="corpo">Casos de violência — entre eles o da professora Fabíola — se avolumam nas escolas públicas da capital federal de tal forma que passaram a compor a rotina desses espaços que recebem crianças e adolescentes diariamente. Pra piorar, o cenário já delicado, com situações como bullying, ameaças e agressões, passou a registrar temores por atentados armados, que tiveram uma crescente entre 2022 e 2023. O quadro tem não só preocupado a comunidade escolar como gerado adoecimento dos professores e alunos. Ainda que engaje a ação de gestores e órgãos em torno da questão, nas instituições públicas de ensino do DF, o cenário de violência ainda parece distante de uma solução.</p>
+        
+        <p class="corpo" id="inter_titulo">Mapa de violência</p>
+        <hr>
+        <p class="corpo">Diante do histórico de agressividade, a escola não viu outra medida a não ser pedir a transferência do aluno que ameaçou Fabíola. Após a direção comunicar a decisão à família, a mãe do garoto acionou o Conselho Tutelar para denunciar uma suposta violação do Estatuto da Criança e do Adolescente. Foi então que a professora vítima da ameaça decidiu registrar o caso em um boletim de ocorrência para se resguardar de qualquer retaliação judicial ou administrativa. Por fim, a transferência foi levada a cabo sem a oposição do órgão.</p>
+        <p class="corpo">Outro caso de violência ocorrido em uma escola pública vinculada à Secretaria de Educação do Distrito Federal (SEDF) e que consta nos registros da Polícia Civil é o de B.B. — a docente pediu para ter a identificação limitada às iniciais. A situação que terminou no balcão de uma delegacia ocorreu em 2018, quando a docente impediu dois estudantes de entrarem fora do horário permitido. À época, ela ocupava a função de coordenadora em uma instituição da região administrativa de Samambaia.</p>
+        <p class="corpo">“Eram dois alunos que, sabidamente, não iam para estudar”, relembra. Ela conta que os estudantes, ambos na faixa dos 15 anos, contrariados com a negativa de acesso, a ameaçaram. A dupla afirmou que a esperaria com facas, do lado de fora da escola, ao término do horário de aulas. “Outra servidora da escola já tinha sido ameaçada por esses mesmos garotos um ou dois dias antes de mim. Ela optou por não fazer o boletim de ocorrência, mas eu quis fazer, porque, se qualquer coisa acontecesse, pelo menos estaria registrado”, diz. </p>
+        <p class="corpo">“Ao chegar na delegacia, a gente sempre é informado de que, principalmente por serem menores de idade, não há muito o que ser feito. Eles não tinham nenhuma ocorrência registrada contra esses dois alunos. Então, eles seriam só chamados para dar o depoimento e não haveria nada além disso, nenhum desdobramento além disso para ser feito”, conta. Nesse caso, quem deixou a escola foi a professora. A situação gerou uma piora no quadro de transtorno de ansiedade da professora, que precisou entrar de licença por um mês, e quando retornou percebeu que não havia condições de permanecer na unidade.</p>
+        <p class="corpo">Não raro, os casos de violência registrados no perímetro das escolas terminam descritos em boletins de ocorrência registrados nas delegacias do DF. A reportagem obteve, via Lei de Acesso à Informação (LAI), dados de 2017 a 2022 de boletins de ocorrência registrados pela Polícia Civil do Distrito Federal em instituições de ensino da capital federal. De um banco de dados de mais de 12 mil registros, o levantamento identificou 5.437 que puderam ser relacionados a 574 escolas públicas vinculadas à Secretaria de Educação do Distrito Federal.</p>
+        <p class="corpo">As ocorrências são as mais diversas, ao englobar desde roubos e furtos a atentados contra a vida. O levantamento optou por desconsiderar aqueles casos em que não é possível aferir, com certeza, que há relação com alguma das escolas públicas ou que não têm natureza criminal definida. No sentido de excluir os casos que não contribuem para a sensação de insegurança, ficaram de fora, por exemplo, ocorrências como crimes ambientais, contra o consumidor e de trânsito ocorridos nos perímetros ou proximidades das instituições de ensino.</p>
+        <p class="corpo">Veja mapa que agrega os dados:</p>
+    </div>
+
+    <div>
+        <div id="map"></div>
+    </div>
+    
+    <div class="corpo_container">
+        <p class="corpo">Na dianteira das unidades com maior número de registros está o Centro Educacional 01 da Estrutural, escola que conta com gestão compartilhada entre a Polícia Militar e a SEDF há quase cinco anos. O levantamento mostra que, enquanto em 2019 ocorreram 13 ocorrências relacionadas ao endereço da instituição, em 2022, o valor saltou para 43 registros, um aumento significativo. As ocorrências são das mais diversas naturezas criminais e incluem desde roubos a casos de desacato.</p>
+        <p class="corpo">No ano passado, a escola tomou o noticiário local pelos conflitos decorrentes da gestão compartilhada. Em maio de 2022, um militar escalado para a gestão disciplinar da unidade ameaçou um aluno de 14 anos. Imagens divulgadas pelo Correio Braziliense mostram o agente coagindo também quem gravou a ação. O conflito se deu em meio a manifestações contra a demissão da vice-diretora da unidade, que foi exonerada após ofender o diretor disciplinar, um militar, por discordâncias com a gestão e pelo envio de estudantes à Delegacia da Criança e do Adolescente (DCA).</p>
+        <p class="corpo">O levantamento com base nos boletins da PCDF ainda mostra que, entre as escolas com maior número de ocorrências mapeadas, entre 2017 e 2022, consta o Centro de Ensino Fundamental (CEF) 01 do Paranoá, que figura na 2º posição, com 66 registros. Na 3ª e na 4ª posição, ambas com um acumulado de 53 casos, consta o CEF 01 do Riacho Fundo II e o Centro de Ensino Médio (CEM) Elefante Branco, respectivamente. Confira a lista completa com o número de ocorrências por escola:</p>
+    </div>
+    
+    <div id="chart_container">
+        <div class="flourish-embed flourish-table" data-src="visualisation/15721363"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+    
+    <div class="corpo_container">
+        <p class="corpo" id="inter_titulo">Violência na rotina</p>
+        <hr>
+        <p class="corpo">Joyce Pereira, 20, cumpriu todo o percurso da educação infantil ao ensino médio em escolas públicas da região administrativa de Brazlândia. Por diversas vezes, testemunhou episódios em que a violência invadiu esses espaços, já que não era raro que desavenças entre os alunos resultassem em brigas e trocas de agressões. “De violência, o que presenciei era mais as pessoas se agredindo e todo mundo correndo pra ir ver”, enfatiza.</p>
+        <p class="corpo">Durante o ensino fundamental, Joyce conta que uma aluna invadiu sua sala para tirar satisfação com uma colega, o motivo seria um boato a respeito de comentários maldosos. Nem a presença do professor na sala impediu que a confusão escalasse para uma troca de socos. Quando ele tentou intervir, também se tornou alvo das agressões. “Só que a menina era muito grande e o próprio professor começou a apanhar mesmo. A gente saiu correndo para chamar a direção, para ver se ajudava e o professor ficou desesperado”, relembra.</p>
+        <p class="corpo">Outra memória que se relaciona à violência nas escolas por onde passou é a presença de agentes da Polícia Militar do DF. Joyce lembra que era comum que os alunos fossem revistados na saída da escola, o conhecido como bacu. “Não chega a ser uma violência física, mas é um pouco assim humilhante mesmo. Os alunos de 14 anos levando bacu todos os dias na frente da escola”, lamenta. No ensino médio, as brigas cessaram, mas a presença da polícia seguiu firme na resolução dos conflitos.</p>
+        <p class="corpo">Joyce avalia que as situações não atrapalharam a aprendizagem dela, mas sim a convivência com os colegas. Embora nem todos os alunos sejam vítimas desses episódios, casos de violência interferem na qualidade da experiência do aluno na escola. No sentido de mapear esses casos, o Sistema de Avaliação da Educação Básica (Saeb) inclui o tema no questionário que os diretores das escolas precisam responder. A avaliação é aplicada pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) a cada dois anos na rede pública e em uma amostra da rede privada.</p>
+        <p class="corpo">Os dados mais recentes são de 2021. Levantamento feito por esta reportagem, com base nos dados divulgados pela autarquia, mostram que cerca de 25% dos diretores das escolas públicas do DF afirmam que as escolas registraram furtos e roubos várias ou poucas vezes. Em relação à ocorrência de tráfico de drogas, mais de 13% confirmam a ocorrência nas escolas.</p>
+    </div>
+    
+    <div id="chart_container">
+        <div class="flourish-embed flourish-pictogram" data-src="visualisation/15203920"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+    </div>
+    
+    <div class="corpo_container">
+        <p class="corpo">Catarina Santos, professora da Faculdade de Educação da Universidade de Brasília (UnB), sublinha que a violência não é uma novidade nas escolas. O incremento recente nos registros, explica, pode ter tanto relação com o aumento da conscientização — como o crescimento do debate em torno do <em>bullying</em>, por exemplo — quanto pode representar um reflexo da escalada na violência fora da escola. “Se eu tenho essas violências na sociedade, eu vou ter isso dentro da escola sem dúvida, porque as pessoas que estão dentro da escola são as mesmas pessoas que estão na sociedade”, descreve.</p>
+        <p class="corpo">A professora destaca que a escola é um espaço em que as diferenças se encontram, o que evidencia conflitos existentes na sociedade. “A questão da escola é que ela é o espaço exatamente que deve se organizar para trabalhar pedagogicamente o combate a essas violências, a formação dos sujeitos para o respeito ao diverso, para a não violência”, detalha. Ela ainda explica que a pandemia da Covid-19, que levou ao fechamento das escolas em 2020, exacerbou problemas sociais, que consequentemente se acumularam nas escolas.</p>
+        <p class="corpo">“Junto com a pandemia, se você pega de 2015 a 2019, o que a gente tem também fora da escola é um incentivo e uma liberdade, ou uma liberação, para que as pessoas manifestassem muitas questões que antes não eram muito aceitas ou pelo menos não eram muito verbalizadas, como ser discriminatório, [incentivo à] violência, incentivo ao uso da arma… Como tudo isso foi aumentando na nossa sociedade, isso foi ficando cada vez mais sem freio. Você viu cada vez mais a lógica da intolerância sendo explicitada e a intolerância em vários sentidos, então isso vai reverberar dentro da escola”, explica.</p>
+        <p class="corpo">Zenilda Martins, 47, orientadora educacional no CEF 101 do Recanto das Emas, descreve a escola pública como o reflexo da sociedade. Assim, analisa que esses espaços precisam ser acolhedores para lidar com as questões que os alunos trazem consigo. "Se o aluno não estiver bem emocionalmente na escola, não se sentir acolhido, vai afetar o processo de ensino-aprendizagem, tem estudos que mostram isso. O ambiente da escola precisa ser acolhedor, principalmente da escola pública que tem pessoas que vivem diversas violências, todo tipo de violência que você imaginar na escola tem. É o reflexo da sociedade", explica.</p>
+        
+        <p class="corpo" id="inter_titulo">Ataques armados</p>
+        <hr>
+        <p class="corpo">Entre o fim de 2022 e o decorrer de 2023, as redes de ensino de todo o país acompanharam um aumento nos registros de ameaças e ataques contra escolas públicas e particulares. A repetição de atentados dentro das instituições, muitas vezes levadas a cabo pelos próprios alunos com uso de facas e armas de fogo, se refletiu no aumento do medo nesses espaços. As Secretarias de Educação, que já lidavam com a penetração da violência cotidiana nas escolas, tiveram um desafio a mais na contenção dessa maré de medo — não foi diferente no Distrito Federal.</p>
+        <p class="corpo">O relatório <em>O extremismo de direita entre adolescentes e jovens no Brasil: ataques às escolas e alternativas para a ação governamental</em>, preparado pelo Grupo de Trabalho de Educação do Governo de Transição, opontou que, entre 2000, quando houve o primeiro ataque do tipo no Brasil, e 2022, o país registrou 16 ataques a tiros em escolas. As ações resultaram em 35 vítimas fatais e 72 feridos. Entre os registros está o de novembro do ano passado, em que um estudante invadiu duas escolas de Aracruz (ES) com duas armas. O jovem, que portava um símbolo nazista em um dos braços, matou três professoreas e uma aluna, além de ferir 13 pessoas.</p>
+        <p class="corpo">Marcele Frossard, coordenadora de programa e política da Campanha Nacional pelo Direito à Educação, sublinha que casos de ataques com armas de fogo nas escolas praticados por alunos e ex-alunos, em geral, “são normalmente associados ao bullying e situações prolongadas de exposição a processos violentos, incluindo negligências familiares, autoritarismo parental e conteúdo disseminado em redes sociais e aplicativos de trocas de mensagem”.</p>
+        <p class="corpo">Os dados apresentados pelo relatório se limitam a 2022. O ano seguinte, de 2023, segue na mesma linha. Em março deste ano, outro caso chocante. Um aluno de 13 anos invadiu uma escola e matou uma professora a facadas, além de deixar outros quatro feridos. Em agosto, outro ataque ganhou repercussão nacional, quando um homem de 25 anos invadiu uma creche e matou quatro crianças com golpes de machadinha. A onda de ataques se somou ao medo que tomou conta das instituições diante de ameaças, muitas vezes falsas.</p>
+        <p class="corpo">A maré chegou ao CEF 101 do Recanto das Emas em abril deste ano, a partir de uma ameaça de uma estudante. O diretor da unidade, Paulo Santos, 41, relembra que, no dia seguinte a uma reunião promovida pela SEEDF para orientar sobre esses casos, recebeu um chamado de uma das salas de aula. Ao entrar na turma, ainda sem saber do que o esperava, a cena de uma jovem sentada no fundo da sala, com os pés em cima da cadeira chamou a atenção. “Eu olhei e falei: ‘Tá tudo bem atrás? Vamos sentar direitinho’. Meio que ela me ignorou”, relembra. Nesse momento, o diretor percebeu que algo estava errado.</p>
+        <p class="corpo">Ao chamar a estudante para uma conversa reservada, questionou o que estava acontecendo. A aluna perguntou se poderia falar a verdade, ao que o diretor assentiu. “É o seguinte: eu ia trazer uma arma para a escola, mas eu desisti, porque eu ia matar o professor e aqueles três meninos lá da turma”, reproduz. A estudante, que planejava pegar a arma do pai ou uma faca para cometer o crime, justificou que mataria o professor e os colegas por não gostar de atitudes deles. “Eu falei que isso não faria bem e não resolveria nada. O que mais me surpreendeu foi que ela falou que isso resolveria sim, porque a essa altura já estariam mortos”, conta.</p>
+        <p class="corpo">“A gente viu que muitas vezes essas pessoas são muito influenciadas pelo que está acontecendo no momento. Então, como estava aquela onda de massacre de crianças, de gente atuando com faca, com machadinha, com arma e tudo, em escolas, ela logo associou que iria fazer a mesma coisa. Então, muitas vezes, um evento crítico que acontece em um lugar, quando ele é veiculado nas mídias e tudo, vai meio que influenciando outras pessoas a fazerem a mesma coisa”, diz.</p>
+        <p class="corpo">O diretor relata que chamou os responsáveis da menina na escola para conversar sobre a situação. O caso acabou registrado em um boletim de ocorrência e a estudante precisou ser transferida de escola. As ações contemplam o protocolo de ação formulado pela própria SEEDF diante dos aumentos de registros desse tipo. A ação contou com a abertura de canais de denúncia e medidas de prevenção, como um aumento no efetivo nas escolas.</p>
+       
+        <p class="corpo" id="inter_titulo">Militarização como solução</p>
+        <hr>
+        <p class="corpo">Na esteira do bolsonarismo, Ibaneis Rocha (MDB-DF) venceu o pleito de 2018 e garantiu o comando da capital federal por quatro anos — que viria a se somar a mais quatro com a vitória nas urnas em 2022. A proposta de governo para o primeiro mandato, porém, nada dizia sobre uma medida inédita na educação do DF e que marcaria a gestão do político: a implantação do modelo cívico-militar de gestão compartilhada em escolas da rede pública.</p>
+        <p class="corpo">Em 31 de janeiro de 2019, uma portaria conjunta inaugurou a implantação do projeto-piloto em quatro escolas públicas do DF. Assinavam o documento, os então secretários Rafael Parente, da Educação, e Anderson Torres, da Segurança Pública. O instrumento listava o enfrentamento da violência no ambiente escolar como um dos focos. De início, entraram no programa o Centro Educacional (CED) 03 de Sobradinho, o CED 308 do Recanto das Emas, o CED 01 da Estrutural e o CED 07 da Ceilândia.</p>
+        <p class="corpo">O modelo delega à Segurança, por meio do emprego de quadros da PMDF e do Corpo de Bombeiros, a gestão disciplinar da escola, o que inclui a “coordenação de atividades extracurriculares e nas ações disciplinares voltadas à formação cívica, moral e ética do corpo discente, objetivando o bem-estar social”. A Secretaria de Educação, por sua vez, se limita à gestão administrativa e pedagógica das escolas e pelo cumprimento do Projeto Político-Pedagógico, conforme Leis de Diretrizes Educacionais.</p>
+        <p class="corpo">A portaria que deu início ao projeto previa que nenhuma unidade seria obrigada a adotar o modelo de gestão compartilhada. No entanto, no 2º semestre de 2019, o GDF preparava a expansão do modelo para mais cinco escolas. Em consulta à comunidade escolar, duas unidades recusaram o modelo, mas Ibaneis afirmou que seguiria em frente com a mudança. O gesto acarretou na demissão do então secretário de educação, Rafael Parente, por discordar da imposição. Diante da repercussão negativa o governador, desistiu de obrigar o modelo às unidades, já que desistiu de uma delas e promoveu uma nova votação na outra, que aprovou o modelo.</p>
+        <p class="corpo">Letícia Montandon, diretora do Sindicato dos Professores no Distrito Federal (Sinpro-DF), classifica a gestão compartilhada como incompatível com o modelo de gestão democrática já presente nas escolas do DF, em que os gestores são escolhidos por meio do voto. A representante, que considera que o modelo não foi efetivo para combater a violência, ainda destaca que a entidade tem recebido denúncias com relação ao desrespeito de PMs às cátedras dos docentes. “Nosso grande pleito é pelo policiamento escolar, que é do portão para fora, em que há o policiamento da redondeza e tudo mais”, explica.</p>
+        <p class="corpo">A meta do GDF é que, até 2026, a SEEDF conte com 40 colégios cívico-militares. Atualmente, são 16 unidades com a gestão compartilhada, sendo que quatro delas provêm do Programa Nacional das Escolas Cívico-Militares. O Pecim, como ficou conhecido o programa lançado na gestão de Jair Bolsonaro (PL), expandiu a militarização para mais de 200 escolas pelo país. O presidente Luiz Inácio Lula da Silva (PT), logo após assumir o Planalto, findou o programa em 2023, mas não impediu que o modelo seguisse sendo aplicado pelas redes estaduais.</p>
+        <p class="corpo">Embora a militarização das escolas públicas esteja no centro do debate sobre violência, a professora da Faculdade de Educação da UnB Catarina Santos ressalta que a solução não se dá com repressão policial ou com controle cada vez maior. “Combater a violência significa combater as suas causas”, observa. “A polícia põe as pessoas para cumprir regras e regras que não são regras da escola, são regras que fazem sentido para a polícia, para dentro do quartel, para esse tipo de coisa, mas para a escola não faz nenhum sentido. Então, isso vai inevitavelmente controlar o estudante, dizer que ele não pode fazer coisas que você espera que adolescente faça, vai fazer com que aumente a violência e não como diminua a violência”.</p>
+        <p class="corpo">Catarina chama atenção para o fato de que, com a militarização, grande parte dos boletins de ocorrência relacionados a essas instituições passam a ter relação com a forma como a polícia encara a rotina dentro de uma escola e as próprias violências que a polícia desencadeia contra esses estudantes. Ela ainda explica que o ambiente acaba se tornando cada vez mais “hostil e mais fechado e mais pesado dentro das escolas após a sua militarização”.</p>
+        <p class="corpo">“Até porque a polícia não está dando conta de lidar com isso fora da escola. E essa quantidade de violência não é maior dentro da escola do que fora dela. Dentro da escola, pelo contrário, você tem bem menos”, ressalta Catarina. “Se a gente tivesse a quantidade de assédio sexual, de violência sexual e de violência física dentro da escola que você tem fora, a nossa escola seria um verdadeiro campo de guerra. Mas a gente não tem isso, a gente tem a escola muito mais como espaço de denúncia e de proteção desse tipo de coisa. Então, a militarização não só não resolveu essa questão, como ela ampliou”.</p>
+        <p class="corpo">Nesse mesmo sentido, Marcele Frossard, coordenadora de programa e política da Campanha Nacional pelo Direito à Educação, destaca que a diminuição da violência nas escolas não será resolvida por medidas como a criação de mais escolas cívico-militares. “Pelo contrário, precisamos apostar no princípio da gestão democrática e da escola como ambiente fértil para o exercício da cidadania, na qual trabalhadores da escola e estudantes possuem voz ativa na construção do espaço escolar e da sociedade que desejam conviver”, defende.</p>
+    </div>
+    
+    <!--
+    <div id="galeria">
+        <ul class="gallery">
+            
+            <li style="background-image: url('Escolas militarizadas/CED 01 do itapoa Lúcio Bernardo Jr Agência Brasília.jpg')">
+                <p class="legenda">CED 01 do Itapoã</p>
+            </li>
+            
+            <li style="background-image: url('Escolas militarizadas/ced_3_sobradinho.jpg')">
+                <p class="legenda">CED 03 do Sobradinho</p>
+            </li>
+
+            <li style="background-image: url('Escolas militarizadas/ced_3_sobradinho.jpg')">
+                <p class="legenda"></p>
+            </li>
+
+        </ul>
+    </div>
+    -->
+
+    <div class="corpo_container" style="margin-bottom: 10em;">
+        <p class="corpo" id="inter_titulo">Adoecimento</p>
+        <hr>
+        <p class="corpo">A professora Fabíola relembra que ao entrar na profissão tinha a imagem do professor como um herói. Diante das situações que viveu, encontrou os próprios limites. Além do caso de 2018, em que recebeu uma ameaça de um aluno, a docente relembra um episódio de 2006. Na ocasião, ela voltava de uma licença médica, após fazer um transplante de córnea. O tampão e 12 pontos no olho demandavam cuidados especiais, mas não a impediam de seguir com as aulas.</p>
+        <p class="corpo">Durante uma das aulas, no entanto, ela precisou intervir em um conflito, em que um estudante partiu para cima de outro ao ser contrariado em uma brincadeira. Em um acesso de raiva, porém, ele pegou uma cadeira e a arremessou. “Eu entrei na frente da cadeira e a cadeira pegou em mim. Eu tentei segurar o máximo que eu pude, mas o pé da cadeira bateu no meu olho, justamente no olho que eu tinha feito um transplante de córnea”, conta.</p>
+        <p class="corpo">“Como nesse dia eu tinha tirado dois pontos, eu estava com um tampão de acrílico no meu olho. A sorte foi a proteção em si porque senão eu tinha perdido 100% da minha visão”, conta. A agressão comprometeu o tratamento e ela precisou ser submetida a mais dois transplantes. Ainda assim, houve um comprometimento de 60% da visão. “Isso na época me abalou muito, mas eu tentei levar... Eu me senti como professora... Eu só tinha 27 anos na época. Então, eu tentei levar da melhor forma possível, caminhando. Desenvolvi crises de ansiedade, mas tudo muito tratado”, relata.</p>
+        <p class="corpo">Cibely Faria, 45, professora há mais de 20 anos em escolas públicas, relembra uma situação que marcou a trajetória dela na sala de aula. Em 2018, em mais um dia de aula para uma turma de cerca de 20 alunos na faixa dos 13 anos, a professora recebeu o lanche da turma e se preparou para dar início ao intervalo. Como era de costume, o grupo tomou a vitamina preparada pela cantina ali mesmo, na sala de aula. Ao término da refeição, porém, dois alunos contaram que cuspiram no alimento. Ao descobrir a brincadeira de mal gosto, Cibely logo encaminhou os dois para a direção, onde levaram advertência e tiveram os pais convocados à escola.</p>
+        <p class="corpo">Ao retornar para a sala, um dos estudantes apontou o dedo na cara de Cibely e disparou: “Sua desgraçada, por sua culpa eu vou apanhar”. A situação desencadeou uma discussão dentro da sala de aula que levou a professora a se retirar. Todo aquele contexto representou um gatilho para situações de estresse que já se acumulavam, e a professora se viu tomada por uma crise de ansiedade. “No outro dia, eu não consegui comparecer à escola. Fui para o psiquiatra, e lá o psiquiatra me deu um atestado de uma semana”, conta. A docente seguiu o tratamento médico e a situação foi contornada na escola com a mudança de turma dos alunos.</p>
+        <p class="corpo">Os casos de Fabíola, B.B. e Cibely têm como ponto comum o adoecimento mental a partir da violência, situação que se estende a outros membros da comunidade escolar. A professora da UnB Catarina Santos destaca serem necessárias medidas que olhem de forma ampliada para as violências nas suas diferentes formas, seja física ou psicológica. “O que estamos trabalhando no nosso currículo, nas nossas escolas, cotidianamente, para lidar com essas questões?”, questiona. “As outras violências mais invisibilizadas ou que não são explícitas são maiores do que a violência física, que também é consequência dessas outras formas de agressão”, pondera.</p>
+       
+        <p class="corpo" id="inter_titulo">Outro lado</p>
+        <hr>
+        <p class="corpo">Questionada pela reportagem sobre o contexto de violência nas escolas públicas da capital federal, a Secretaria de Educação do Distrito Federal afirmou que colabora para reduzir as ocorrências nas imediações das unidades e na prevenção de crimes, por isso, “está em constante diálogo com a SSP para a elaboração de melhores políticas em prol da segurança de toda comunidade escolar”.</p>
+        <p class="corpo">A pasta ressalta que, no início do ano, instituiu a Comissão Permanente pela Paz nas Escolas da Rede Pública de Ensino do DF, e também um protocolo de notificação sobre a violência física, psicológica e sexual no âmbito das unidades escolares. “O objetivo é aprimorar o planejamento para enfrentar casos de denúncias de violência na rede”, destaca.</p>
+        <p class="corpo">“Por meio da Comissão, foi distribuído o caderno orientador ‘Convivência Escolar e Cultura de Paz’ para todas as escolas do Distrito Federal. A ideia é orientar professores e alunos sobre como deve ser tratado o tema ‘violência’ nas instituições. O documento, disponível no site da secretaria desde 2020, quando foi atualizado e organizado em três partes, traz temas como educação em direitos humanos, ética, justiça, diversidade, cultura de paz e competências socioemocionais”, detalha.</p>
+        <p class="corpo">“Ainda no âmbito da educação, os diretores das escolas públicas do DF receberam orientações relativas à prevenção e ao enfrentamento de situações de violência no espaço escolar. A palestra, ministrada por profissionais da Segurança Pública, aconteceu no mês de abril deste ano, no Auditório da Academia de Bombeiros Militar, no Setor Policial Sul. No encontro, os protocolos de segurança definidos pela SSP foram transmitidos aos diretores das unidades de ensino”, observa.</p>
+        <p class="corpo">A SEEDF destaca que, no DF, houve reforço do sistema de inteligência da segurança pública, que intensificou o monitoramento da deep web e perfis que propaguem ameaças ou façam apologia à violência nas escolas por meio de redes sociais.</p>
+    </div>
+
+    <hr id="final">
+    <div class="corpo_container">
+        <p class="corpo"><em>Produto apresentado à Universidade de Brasília como requisito parcial para a obtenção do título de bacharel em Jornalismo.</em></p>
+    </div>
+    
+    <script>    
+        var map = L.map('map', {
+            center:[-15.81491125534942, -47.95846266191304],
+            zoom:12
+        }); 
+
+        
+        var mapaEscuro = L.tileLayer('https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+            attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            minZoom: 0,
+            maxZoom: 22,
+            subdomains: 'abcd',
+            accessToken: 'URmD2aZm5Fnyfz7MZ8OJ3kcnEXK80ymcVdcNmjv6GB02Yvqc4ag2N3FR2NiuPwqw'
+        }).addTo(map);
+
+        // var myStyle = {
+        //     "color": "#797979",
+        //     "weight": 2,
+        //     "opacity": 0.4,
+        //     "fillOpacity": 0};
+
+       // var geojson = L.geoJSON(geojsonFeature, {style: myStyle}).addTo(map);
+
+        for (var i = 0; i < anos2022a2017Todas.length; i++) {
+            marker = new L.circle([anos2022a2017Todas[i]['NU_LATITUD'], anos2022a2017Todas[i]['NU_LONGITU']], 
+            {color: '#F2B705', 
+            fillColor: '#F2B705', 
+            fillOpacity: 0.6,
+            weight:1, 
+            radius: anos2022a2017Todas[i]['Total']*10})
+            .bindPopup(`<p style="font-size:12px; color:black; font-family:Arial; margin:0; font-weight: bold;">${anos2022a2017Todas[i]['NO_ENTIDADE']}</p><p style="margin:0;font-size:12px;">Nº de ocorrências: ${anos2022a2017Todas[i]['Total']}</p>`)
+            .addTo(map);
+        }
+        
+    </script>
+
+    <script>
+        const slider = document.querySelector('.gallery');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', e => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', _ => {
+        isDown = false;
+        slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', _ => {
+        isDown = false;
+        slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const SCROLL_SPEED = 3;
+        const walk = (x - startX) * SCROLL_SPEED;
+        slider.scrollLeft = scrollLeft - walk;
+        });
+
+
+    </script>
+
+</body>
+</html>
