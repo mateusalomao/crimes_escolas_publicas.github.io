@@ -192,12 +192,12 @@ p.legenda {
     }
     
     h1 {
-        font-size: 40px;
+        font-size: 30px;
         font-family: "PostoniStandardBold",Georgia,serif;
         font-weight: 80;
         color: rgb(255, 255, 255);
         margin: 0;
-        padding-top:40vh;
+        padding-top:30vh;
         text-align: center;
         position: relative;
         /*text-shadow: 1px 1px 4px black;*/
@@ -205,7 +205,7 @@ p.legenda {
     }
 
     div#sub_cont {
-        width: 85%;
+        width: 90%;
         margin: auto;
     }
     
