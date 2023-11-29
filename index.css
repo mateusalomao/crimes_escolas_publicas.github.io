@@ -66,7 +66,7 @@ hr#final {
 
 div#autoria {
     color: white;
-    font-family: roboto;
+    font-family: Vernada;
     font-weight: lighter;
     margin: auto;
     margin-top: 5em;
@@ -165,7 +165,7 @@ p.legenda {
     font-weight: bold;
     color: white;
     text-align: left;
-    font-family: Roboto;
+    font-family: Verdana;
     position: relative;
     background-color: #343332;
     width: 80%;
