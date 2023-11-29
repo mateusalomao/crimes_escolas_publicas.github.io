@@ -161,17 +161,23 @@ li {
 }
 
 p.legenda {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
     color: white;
     text-align: left;
     font-family: Roboto;
     position: relative;
-    
-    width: 40%;
+    background-color: #343332;
+    width: 80%;
     margin-top: 68%;
     padding-left: 5%;
 }
 
+a.credito{
+    font-weight: lighter;
+    color: rgb(157, 157, 157);
+    font-size: 15px;
+}
 
 @media (max-width:700px) {
 
