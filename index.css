@@ -112,8 +112,8 @@ p#inter_titulo {
 }
 
 #first_p::first-letter {
-    font-family: 'GFS Didot';
-    font-weight: bold;
+    font-family: "PostoniStandardBold",Georgia,serif;
+    font-weight: normal;
     initial-letter: 3;
     margin-right: 10px;
 }
@@ -250,8 +250,8 @@ a.credito{
     }
     
     #first_p::first-letter {
-        font-family: 'GFS Didot';
-        font-weight: bold;
+        font-family: "PostoniStandardBold",Georgia,serif;
+        font-weight: normal;
         initial-letter: 2;
         margin-right: 10px;
     }
