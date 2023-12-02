@@ -196,12 +196,14 @@
     <hr id="final">
     <div class="corpo_container">
         <p class="corpo"><em>Produto apresentado à Universidade de Brasília como requisito parcial para a obtenção do título de bacharel em Jornalismo.</em></p>
+        <p class="corpo"><em>Foto de abertura: Agência Brasília</em></p>
     </div>
     
     <script>    
         var map = L.map('map', {
             center:[-15.793630550560364, -47.87519202731323],
-            zoom:11
+            zoom:11,
+            'attributionControl': false
         }); 
 
         
@@ -223,8 +225,8 @@
 
         for (var i = 0; i < anos2022a2017Todas.length; i++) {
             marker = new L.circle([anos2022a2017Todas[i]['NU_LATITUD'], anos2022a2017Todas[i]['NU_LONGITU']], 
-            {color: '#F2B705', 
-            fillColor: '#F2B705', 
+            {color: '#2498ff', 
+            fillColor: '#2498ff', 
             fillOpacity: 0.6,
             weight:1, 
             radius: anos2022a2017Todas[i]['Total']*10})
